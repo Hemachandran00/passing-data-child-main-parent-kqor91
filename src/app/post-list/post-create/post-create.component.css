@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorMsg{
+  padding:0px;
+  color: red;
+}

@@ -1,16 +1,17 @@
- Title : <input type="text" [(ngModel)]="mainTitle" placeholder="title">
- <br><br>
- Content: <input type="text" [(ngModel)]="mainContent" placeholder="Content">
- <br><br>
- <button (click)="sendPost()">Post</button>
+<div>
+	POST Title and Content
+	<div class="content">
+		<div>
+			Title : <input type="text" [(ngModel)]="mainTitle" placeholder="title">
+		</div>
+		<div>
+			Content: <input type="text" [(ngModel)]="mainContent" placeholder="Content">
+		</div>
 
- <ul>
-	<li *ngFor="let post of posts">{{post.title}} - {{post.content}}</li>
- 
-</ul>
+		<button (click)="sendPost()">Post</button>
 
-
-
-
-
-
+	</div>
+	<div class="content errorMsg" *ngIf="cusValidator">
+		Enter Valid detail
+	</div>
+</div>

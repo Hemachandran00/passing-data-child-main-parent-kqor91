@@ -8,19 +8,20 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 export class PostCreateComponent implements OnInit {
   mainTitle = '';
   mainContent = '';
-  constructor() { }
- 
-   @Output() senddata = new EventEmitter();
-  
-  sendPost(){
-    const post = {title:this.mainTitle, content:this.mainContent}
-    this.senddata.emit(post);
+  public cusValidator = false;
+  constructor() {}
+
+  @Output() senddata = new EventEmitter();
+
+  sendPost() {
+    if (this.mainTitle && this.mainContent) {
+      const post = { title: this.mainTitle, content: this.mainContent };
+      this.cusValidator = false;
+      this.senddata.emit(post);
+    } else {
+      this.cusValidator = true;
+    }
   }
 
-  ngOnInit() {
-    
-  }
-
-  
-
+  ngOnInit() {}
 }

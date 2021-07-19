@@ -1,3 +1,7 @@
-<ul>
-  <li *ngFor="let data of mainData">{{data.title}} - {{data.content}}</li>
-</ul>
+<div class="childList">
+  <h3>Posted List</h3>
+  <div *ngIf="mainData.length==0">No Data Posted</div>
+  <ul>
+    <li *ngFor="let data of mainData"> {{data.title}} - {{data.content}}</li>
+  </ul>
+</div>
