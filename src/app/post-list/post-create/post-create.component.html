@@ -1,0 +1,16 @@
+ Title : <input type="text" [(ngModel)]="mainTitle" placeholder="title">
+ <br><br>
+ Content: <input type="text" [(ngModel)]="mainContent" placeholder="Content">
+ <br><br>
+ <button (click)="sendPost()">Post</button>
+
+ <ul>
+	<li *ngFor="let post of posts">{{post.title}} - {{post.content}}</li>
+ 
+</ul>
+
+
+
+
+
+
